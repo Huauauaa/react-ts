@@ -12,7 +12,7 @@ export default {
   },
 } as Meta;
 
-const Template: Story<TsxDemoProps> = (args) => <TsxDemo {...args} />;
+const Template: Story<TsxDemoProps> = (args: any) => <TsxDemo {...args} />;
 
 export const Empty = Template.bind({});
 Empty.args = {};

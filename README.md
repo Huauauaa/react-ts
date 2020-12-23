@@ -7,3 +7,7 @@
 | ----- | --------------------------------------------------------------------------------------------------------------------------- |
 | home  | [![netlify](https://shields.io/netlify/189e1175-ce4a-40c2-8680-77ee330a2194)](https://huauauaa-react-ts.netlify.app/)       |
 | story | [![netlify](https://shields.io/netlify/53df5b22-dca9-4983-a834-170b13519e69)](https://huauauaa-react-ts-story.netlify.app/) |
+
+## Todo
+
+- [ ] `styleguide:build` error
