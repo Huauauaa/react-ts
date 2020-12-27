@@ -4,15 +4,28 @@ enum Color {
   Blue,
 }
 
+enum LogLevel {
+  ERROR,
+  WARN,
+  INFO,
+  DEBUG,
+}
+
+type LogLevelStrings = keyof typeof LogLevel;
+
 export default function TsFeat() {
   const color: string = Color[1];
   const c: number = Color.Blue;
   console.log(c);
   const str: string = 'ts';
   const str1: String = 'feat'; // not Recommend
+  const level: LogLevelStrings = 'DEBUG';
   return (
-    <div style={{ color }}>
-      {str} {str1}
-    </div>
+    <fieldset>
+      <legend>TS</legend>
+      <div style={{ color }}>
+        {str} {str1} {typeof Color} {level}
+      </div>
+    </fieldset>
   );
 }
