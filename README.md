@@ -13,3 +13,8 @@
 
 - [x] `styleguide:build` error
 - [ ] `yarn test`
+
+## packages
+
+- [react-syntax-highlighter](https://github.com/react-syntax-highlighter/react-syntax-highlighter)
+- [react-markdown](https://github.com/remarkjs/react-markdown)
