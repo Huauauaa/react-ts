@@ -7,9 +7,9 @@ import Highlight from '../components/Highlight';
 import Markdown from '../components/Markdown';
 import CssGround from '../components/CssGround';
 
-function Tool() {
+function Demo() {
   return (
-    <div className="tool">
+    <>
       <CssGround></CssGround>
       <TsxDemo />
       <JsxDemo />
@@ -18,8 +18,8 @@ function Tool() {
       <MdnDemo />
       <Highlight />
       <Markdown />
-    </div>
+    </>
   );
 }
 
-export default Tool;
+export default Demo;

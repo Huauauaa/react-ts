@@ -1,5 +1,6 @@
 import Home from '../views/Home';
-import Tool from '../views/Tool';
+import About from '../views/About';
+import Demo from '../views/Demo';
 
 const routers = [
   {
@@ -9,10 +10,16 @@ const routers = [
     component: Home,
   },
   {
-    name: 'tool',
-    path: '/tool',
+    name: 'about',
+    path: '/about',
     exact: true,
-    component: Tool,
+    component: About,
+  },
+  {
+    name: 'demo',
+    path: '/demo',
+    exact: true,
+    component: Demo,
   },
 ];
 
