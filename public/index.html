@@ -39,5 +39,19 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script>
+      console.info(
+        'branch: %c<%=htmlWebpackPlugin.options.branch %>',
+        'color: #fff; background-color: blue;padding: 2px',
+      );
+      console.info(
+        'version: %c<%=htmlWebpackPlugin.options.version %>',
+        'color: #fff; background-color: blue;padding: 2px',
+      );
+      console.info(
+        'commitHash: %c<%=htmlWebpackPlugin.options.commitHash %>',
+        'color: #fff; background-color: blue;padding: 2px',
+      );
+    </script>
   </body>
 </html>
