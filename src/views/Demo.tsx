@@ -6,10 +6,12 @@ import MdnDemo from '../components/MdnDemo';
 import Highlight from '../components/Highlight';
 import Markdown from '../components/Markdown';
 import CssGround from '../components/CssGround';
+import MaterialUIDemo from '../components/MaterialUIDemo';
 
 function Demo() {
   return (
     <>
+      <MaterialUIDemo></MaterialUIDemo>
       <CssGround></CssGround>
       <TsxDemo />
       <JsxDemo />
