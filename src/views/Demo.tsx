@@ -7,10 +7,12 @@ import Highlight from '../components/Highlight';
 import Markdown from '../components/Markdown';
 import CssGround from '../components/CssGround';
 import MaterialUIDemo from '../components/MaterialUIDemo';
+import OSInfo from '../components/OSInfo';
 
 function Demo() {
   return (
     <>
+      <OSInfo></OSInfo>
       <MaterialUIDemo></MaterialUIDemo>
       <CssGround></CssGround>
       <TsxDemo />
