@@ -12,6 +12,7 @@
 ## Todo
 
 - [x] `styleguide:build` error
+- [x] unit test demo
 - [ ] `yarn test`
 
 ## packages
