@@ -14,8 +14,29 @@ export default function MdnDemo() {
 
   console.log(fooMap);
 
+  const number = 3500;
+
   return (
     <>
+      <fieldset>
+        <legend>Intl</legend>
+        <ul>
+          <li>{new Intl.NumberFormat().format(number)}</li>
+          <li>
+            {new Intl.NumberFormat('en-US', {
+              style: 'currency',
+              currency: 'USD',
+            }).format(number)}
+          </li>
+          <li>
+            {new Intl.NumberFormat('en-US', {
+              style: 'currency',
+              currency: 'CNY',
+              minimumIntegerDigits: 21,
+            }).format(number)}
+          </li>
+        </ul>
+      </fieldset>
       <fieldset>
         <legend>Map</legend>
         <ul>
