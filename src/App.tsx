@@ -11,11 +11,7 @@ function App() {
           <Layouts routers={routers}>
             {routers.map((route) => {
               return (
-                <Route
-                  component={route.component}
-                  path={route.path}
-                  key={route.name}
-                  exact={!!route.exact}></Route>
+                <Route component={route.component} path={route.path} key={route.name} exact={!!route.exact}></Route>
               );
             })}
           </Layouts>
