@@ -8,10 +8,13 @@ import Markdown from '../components/Markdown';
 import CssGround from '../components/CssGround';
 import MaterialUIDemo from '../components/MaterialUIDemo';
 import OSInfo from '../components/OSInfo';
+import Common from '../components/Common';
 
 function Demo() {
   return (
     <>
+      <Common name="foo"></Common>
+      <Common name="bar"></Common>
       <OSInfo></OSInfo>
       <MaterialUIDemo></MaterialUIDemo>
       <CssGround></CssGround>
