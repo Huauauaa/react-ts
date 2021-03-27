@@ -1,3 +1,5 @@
+import Student from './Student';
+
 export default function MdnDemo() {
   const months: string[] = ['March', 'Jan', 'Feb', 'Dec'];
   const sortedMonths: string[] = [...months].sort();
@@ -16,8 +18,20 @@ export default function MdnDemo() {
 
   const number = 3500;
 
+  const stu = new Student('Harvey', 'Hua');
+  const stu1 = new Student('Kobe', 'Bryant');
+
+  console.log(stu, stu1);
+
   return (
     <>
+      <fieldset>
+        <legend>class</legend>
+        <ul>
+          <li>{`${stu}`}</li>
+          <li>{stu1.name}</li>
+        </ul>
+      </fieldset>
       <fieldset>
         <legend>Intl</legend>
         <ul>
