@@ -9,10 +9,12 @@ import CssGround from '../components/CssGround';
 import MaterialUIDemo from '../components/MaterialUIDemo';
 import OSInfo from '../components/OSInfo';
 import Common from '../components/Common';
+import ECMA from '../components/ECMA';
 
 function Demo() {
   return (
     <>
+      <ECMA></ECMA>
       <Common name="foo"></Common>
       <Common name="bar"></Common>
       <OSInfo></OSInfo>
