@@ -11,10 +11,12 @@ import OSInfo from '../components/OSInfo';
 import Common from '../components/Common';
 import ECMA from '../components/ECMA';
 import LodashDemo from '../components/LodashDemo';
+import XMLDOM from '../components/XMLDOM';
 
 function Demo() {
   return (
     <>
+      <XMLDOM></XMLDOM>
       <LodashDemo></LodashDemo>
       <ECMA></ECMA>
       <Common name="foo"></Common>
