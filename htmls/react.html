@@ -24,12 +24,41 @@
 
       const data = ['angular', 'vue', 'react'];
 
+      function Demo() {
+        console.log('this', this); // `this` is undefined, 因为babel开启了严格模式
+        return <div>demo</div>;
+      }
+
+      class Dummy extends React.Component {
+        render() {
+          const { context, props, state, refs } = this;
+          console.log({ context, props, state, refs });
+
+          return <div>This is {props.name}</div>;
+        }
+      }
+
       ReactDOM.render(
-        <ul>
-          {data.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
-        </ul>,
+        <div>
+          <ul>
+            {data.map((item, index) => (
+              <li key={index}>{item}</li>
+            ))}
+          </ul>
+          <fieldset>
+            <legend>组件写法</legend>
+            <ul>
+              <li>
+                <Demo name="foo" />
+              </li>
+              <li>{Demo()}</li>
+              <li>
+                <Dummy name="bar" />
+              </li>
+              <li>{new Dummy({ name: 'Harvey' }).render()}</li>
+            </ul>
+          </fieldset>
+        </div>,
         container,
       );
     </script>
