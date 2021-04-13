@@ -30,11 +30,31 @@
       }
 
       class Dummy extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            id: Date.now(),
+            count: 0,
+          };
+        }
+
+        onClick = (step) => {
+          this.setState({
+            count: this.state.count + step,
+          });
+        };
+
         render() {
           const { context, props, state, refs } = this;
           console.log({ context, props, state, refs });
 
-          return <div>This is {props.name}</div>;
+          return (
+            <div>
+              {props.name} 的id是{state.id}-{state.count}
+              <button onClick={() => this.onClick(1)}>+</button>
+              <button onClick={() => this.onClick(-1)}>-</button>
+            </div>
+          );
         }
       }
 
@@ -51,11 +71,9 @@
               <li>
                 <Demo name="foo" />
               </li>
-              <li>{Demo()}</li>
               <li>
                 <Dummy name="bar" />
               </li>
-              <li>{new Dummy({ name: 'Harvey' }).render()}</li>
             </ul>
           </fieldset>
         </div>,
