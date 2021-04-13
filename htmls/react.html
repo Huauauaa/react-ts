@@ -41,6 +41,15 @@
 
         id = Date.now();
 
+        static defaultProps = {
+          age: 12,
+        };
+
+        static propTypes = {
+          name: PropTypes.string.isRequired,
+          age: PropTypes.number,
+        };
+
         onClick = (step) => {
           this.setState({
             count: this.state.count + step,
@@ -62,14 +71,6 @@
       }
 
       console.log('PropTypes', PropTypes);
-
-      Dummy.propTypes = {
-        name: PropTypes.string.isRequired,
-      };
-
-      Dummy.defaultProps = {
-        name: 'default name',
-      };
 
       ReactDOM.render(
         <div>
