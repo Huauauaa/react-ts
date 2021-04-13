@@ -31,13 +31,17 @@
       }
 
       class Dummy extends React.Component {
-        constructor(props) {
-          super(props);
-          this.state = {
-            count: 0,
-          };
-          console.log(this);
-        }
+        // constructor(props) {
+        //   super(props);
+        //   this.state = {
+        //     count: 0,
+        //   };
+        //   console.log(this);
+        // }
+
+        state = {
+          count: 0,
+        };
 
         id = Date.now();
 
@@ -89,7 +93,7 @@
                 <Dummy name="bar" />
               </li>
               <li>
-                <Dummy />
+                <Dummy name="harvey" />
               </li>
             </ul>
           </fieldset>
