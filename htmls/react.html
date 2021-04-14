@@ -58,6 +58,7 @@
           this.setState({
             count: this.state.count + step,
           });
+          console.log(`<input> value is %c${this.input.value}`, 'color:red');
         };
 
         render() {
@@ -67,6 +68,14 @@
           return (
             <div>
               {props.name} 的id是{this.id}-{state.count}
+              <input
+                ref={(currentNode) => {
+                  this.input = currentNode;
+                  // 每次更新都调用
+                  console.log(currentNode);
+                }}
+                type="text"
+              />
               <button onClick={() => this.onClick(1)}>+</button>
               <button onClick={() => this.onClick(-1)}>-</button>
             </div>
