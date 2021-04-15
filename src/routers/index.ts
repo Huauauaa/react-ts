@@ -1,6 +1,7 @@
 import Home from '../views/Home';
 import About from '../views/About';
 import Demo from '../views/Demo';
+import Login from '../views/Login';
 
 const routers = [
   {
@@ -20,6 +21,12 @@ const routers = [
     path: '/demo',
     exact: true,
     component: Demo,
+  },
+  {
+    name: 'login',
+    path: '/login',
+    exact: true,
+    component: Login,
   },
 ];
 
