@@ -41,6 +41,8 @@
 
         state = {
           count: 0,
+          username: '',
+          password: '',
         };
 
         id = Date.now();
@@ -61,6 +63,17 @@
           console.log(`<input> value is %c${this.input.value}`, 'color:red');
         };
 
+        onSubmit = (e) => {
+          e.preventDefault();
+          console.log('onSubmit', this.state.username, this.state.password);
+        };
+
+        onInputChange = (type) => (e) => {
+          this.setState({
+            [type]: e.target.value,
+          });
+        };
+
         render() {
           const { context, props, state, refs } = this;
           console.log({ context, props, state, refs });
@@ -78,6 +91,18 @@
               />
               <button onClick={() => this.onClick(1)}>+</button>
               <button onClick={() => this.onClick(-1)}>-</button>
+              <fieldset>
+                <legend>登录</legend>
+                <form action="" onSubmit={this.onSubmit}>
+                  账号:
+                  <input type="text" onChange={this.onInputChange('username')} />
+                  <br />
+                  密码:
+                  <input type="password" onChange={this.onInputChange('password')} />
+                  <br />
+                  <button>登录</button>
+                </form>
+              </fieldset>
             </div>
           );
         }
