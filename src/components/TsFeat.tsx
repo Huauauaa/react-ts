@@ -206,7 +206,7 @@ export default function TsFeat() {
   return (
     <fieldset>
       <legend>TS</legend>
-      <div style={{ color }}>
+      <div style={{ color }} data-pink>
         {str} {str1} {typeof Color} {level}
       </div>
       name: {hua.name} {partialPerson.name}

@@ -3,6 +3,30 @@
   p {
     animation: margin-change 5s infinite;
   }
+  * {
+    &[data-blue] {
+      background-color: lightblue;
+    }
+    &[data-pink] {
+      background-color: lightpink;
+    }
+  }
+
+  .p1 {
+    & ~ p {
+      color: lightcoral;
+    }
+    & + p {
+      font-size: 20px;
+    }
+    span {
+      font-weight: bold;
+    }
+
+    & > span {
+      font-size: 30px;
+    }
+  }
 }
 
 @keyframes margin-change {
