@@ -9,6 +9,7 @@ class Student {
   [fn]: string;
   [ln]: string;
   private [id] = v4();
+  test = 'foo';
 
   constructor(firstName: string, lastName: string) {
     this[fn] = firstName;
@@ -29,6 +30,17 @@ class Student {
 
   [inspect]() {
     return this.toString();
+  }
+
+  // static [Symbol.hasInstance](instance: any) {
+  //   console.log('[Symbol.hasInstance]', instance);
+  //   return true;
+  // }
+
+  // Object.toString.call() will dispatch this function
+  get [Symbol.toStringTag]() {
+    console.log('Symbol.toStringTag');
+    return '学生';
   }
 }
 

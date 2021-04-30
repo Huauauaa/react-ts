@@ -1,4 +1,5 @@
-import Student from './Student';
+import Student from '../models/Student';
+import Teacher from '../models/Teacher';
 
 export default function MdnDemo() {
   const months: string[] = ['March', 'Jan', 'Feb', 'Dec'];
@@ -21,7 +22,23 @@ export default function MdnDemo() {
   const stu = new Student('Harvey', 'Hua');
   const stu1 = new Student('Kobe', 'Bryant');
 
-  console.log(stu, stu1);
+  console.log(
+    stu,
+    stu1,
+    stu instanceof Student,
+    {} instanceof Student,
+    Student[Symbol.hasInstance](stu),
+    Student[Symbol.hasInstance]({}),
+    stu.toString(),
+    Object.prototype.toString.call(stu),
+    Object.keys(stu),
+    stu.name,
+    stu.test,
+  );
+
+  const teach = new Teacher();
+
+  console.log('teach', teach, teach.toString(), Object.prototype.toString.call(teach));
 
   return (
     <>

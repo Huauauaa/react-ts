@@ -11,6 +11,10 @@ const About = () => {
     })();
 
     console.log(_.chunk(['a', 'b']));
+
+    setInterval(() => {
+      console.log('object');
+    }, 1000);
   }, []);
 
   return <div>About</div>;
