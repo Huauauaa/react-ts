@@ -12,10 +12,12 @@ import Common from '../components/Common';
 import ECMA from '../components/ECMA';
 import LodashDemo from '../components/LodashDemo';
 import XMLDOM from '../components/XMLDOM';
+import CSS from '../components/CSS';
 
 function Demo() {
   return (
     <>
+      <CSS></CSS>
       <XMLDOM></XMLDOM>
       <LodashDemo></LodashDemo>
       <ECMA></ECMA>
